@@ -34,19 +34,27 @@ A simple full-stack web application for managing employees, developed using **Sp
 
 ## 🗂️ Project Structure
 
-employeemanagement/
+employee_department_management/
 ├── src/
-│ ├── main/
-│ │ ├── java/
-│ │ │ └── com.example.employeemanagement/
-│ │ │ ├── controller/
-│ │ │ ├── model/
-│ │ │ ├── repository/
-│ │ │ └── service/
-│ │ ├── resources/
-│ │ │ ├── static/
-│ │ │ │ ├── css/
-│ │ │ │ └── index.html
-│ │ │ ├── templates/
-│ │ │ └── application.properties
-
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/example/employeemanagement/
+│   │   │       ├── controller/         # REST Controllers for handling HTTP requests
+│   │   │       │   └── EmployeeController.java
+│   │   │       │   └── DepartmentController.java
+│   │   │       ├── model/              # Entity classes (JPA)
+│   │   │       │   └── Employee.java
+│   │   │       │   └── Department.java
+│   │   │       ├── repository/         # JPA Repositories
+│   │   │       │   └── EmployeeRepository.java
+│   │   │       │   └── DepartmentRepository.java
+│   │   │       ├── service/            # Business logic layer
+│   │   │       │   └── EmployeeService.java
+│   │   │       │   └── DepartmentService.java
+│   │   │       └── EmployeeDepartmentManagementApplication.java  # Main Spring Boot class
+│   │   └── resources/
+│   │       ├── application.properties  # DB config, JPA settings.
+│   │       └── static/                 # static resources CSS/JS
+│   │       └── templates/              # Thymeleaf
+├── pom.xml                             # Maven configuration
+└── README.md
