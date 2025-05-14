@@ -36,7 +36,7 @@ A simple full-stack web application for managing employees, developed using **Sp
 
 src/main/java/com/example/employeemanagement/
 
-controller/ — Handles routing and form submissions (e.g., EmployeeController.java)
+controller/ — Handles routing and form submissions
 
 model/ — Contains entity class Employee.java
 
