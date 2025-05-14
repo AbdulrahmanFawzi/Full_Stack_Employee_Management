@@ -34,27 +34,30 @@ A simple full-stack web application for managing employees, developed using **Sp
 
 ## 🗂️ Project Structure
 
-employee_department_management/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/example/employeemanagement/
-│   │   │       ├── controller/         # REST Controllers for handling HTTP requests
-│   │   │       │   └── EmployeeController.java
-│   │   │       │   └── DepartmentController.java
-│   │   │       ├── model/              # Entity classes (JPA)
-│   │   │       │   └── Employee.java
-│   │   │       │   └── Department.java
-│   │   │       ├── repository/         # JPA Repositories
-│   │   │       │   └── EmployeeRepository.java
-│   │   │       │   └── DepartmentRepository.java
-│   │   │       ├── service/            # Business logic layer
-│   │   │       │   └── EmployeeService.java
-│   │   │       │   └── DepartmentService.java
-│   │   │       └── EmployeeDepartmentManagementApplication.java  # Main Spring Boot class
-│   │   └── resources/
-│   │       ├── application.properties  # DB config, JPA settings.
-│   │       └── static/                 # static resources CSS/JS
-│   │       └── templates/              # Thymeleaf
-├── pom.xml                             # Maven configuration
-└── README.md
+src/main/java/com/example/employeemanagement/
+
+controller/ — Handles routing and form submissions (e.g., EmployeeController.java)
+
+model/ — Contains entity class Employee.java
+
+repository/ — Contains EmployeeRepository.java for CRUD operations
+
+service/ — Contains EmployeeService.java for business logic
+
+EmployeeManagementApplication.java — Main class to run the Spring Boot application
+
+src/main/resources/
+
+application.properties — Configuration file (using H2 in-memory database)
+
+static/css/ — Contains custom styles
+
+templates/ — Contains HTML views like:
+
+index.html
+
+employee-list.html
+
+employee-form.html
+
+pom.xml — Maven configuration for dependencies and plugins
